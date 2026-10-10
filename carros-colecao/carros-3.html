@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carros 3 · Coleção Mattel</title><meta name="description" content="Elenco completo de Carros 3 (2017) e controle das miniaturas Mattel 1:55.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800;900&family=Orbitron:wght@600;900&family=Outfit:wght@700;900&family=Saira+Condensed:ital,wght@0,600;0,800;1,800&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<body class="film-3" data-film="3">
+<nav class="nav"><div class="wrap"><a class="brand" href="index.html">🏁 Minha Coleção Carros</a><a href="index.html">Início</a><a href="carros-1.html">Carros</a><a href="carros-2.html">Carros 2</a><a href="carros-3.html" class=on>Carros 3</a></div></nav>
+<header class="hero"><div class="bgfx"></div><div class="wrap">
+<span class="year">2017</span><h1>Carros 3</h1><p class="tag">A nova geração chegou. Agora é hora de escrever o seu legado.</p>
+<div class="stats">
+<div class="stat"><b id="s-total">–</b><span>Carros na coleção</span></div>
+<div class="stat"><b id="s-mattel">–</b><span>Mattel que tenho</span></div>
+<div class="stat"><b id="s-pct">Mattel</b><span>Miniaturas 1:55</span></div>
+<div class="stat progress"><div class="bar"><i id="bar"></i></div><span id="bar-txt">0%</span></div>
+</div></div></header>
+<main class="wrap">
+<div class="toolbar">
+<input id="q" type="search" placeholder="Buscar carro…" aria-label="Buscar">
+<select id="group" aria-label="Grupo"><option value="all">Todos os grupos</option></select>
+<div class="chips">
+<button class="chip on" data-filter="all">Todos</button>
+<button class="chip" data-filter="mattel">Só Mattel</button>
+<button class="chip" data-filter="buy">Falta comprar (Mattel)</button>
+<button class="chip" data-filter="have">Tenho</button>
+<button class="chip" data-filter="missing">Não tenho</button>
+</div>
+<div class="tools">
+<button class="btn primary" id="btn-buy">🛒 Lista de compras</button>
+<button class="btn" id="btn-add">+ Adicionar</button>
+<button class="btn" id="btn-export">Exportar</button>
+<button class="btn" id="btn-import">Importar</button>
+<input id="file-import" type="file" accept="application/json" hidden>
+</div></div>
+<div id="grid"></div>
+</main>
+<footer class="wrap"><p>Marcação "MATTEL 1:55" = miniatura da linha die-cast Mattel identificada. Sempre confira o checklist oficial / comunidades de colecionadores antes de comprar — faltou um carro? Use “+ Adicionar”.</p>
+<p>Seu progresso fica salvo neste navegador (use Exportar para backup). Projeto de fã, sem vínculo com Disney/Pixar/Mattel.</p></footer>
+<dialog id="dlg-buy"><h3>Lista de compras</h3><p id="buy-count"></p><ul id="buy-list"></ul><div class="row"><button class="btn" id="btn-copy">Copiar lista</button><button class="btn primary" data-close>Fechar</button></div></dialog>
+<dialog id="dlg-add"><h3>Adicionar carro</h3><form id="form-add" method="dialog">
+<label>Nome<input name="name" required></label><label>Modelo / descrição<input name="real"></label>
+<label>Grupo<select name="group"></select></label><label>Cor<input type="color" name="color" value="#d3202a"></label>
+<label><span><input type="checkbox" name="mattel" checked> Existe miniatura Mattel</span></label>
+<div class="row"><button type="button" class="btn" data-close>Cancelar</button><button class="btn primary">Adicionar</button></div></form></dialog>
+<script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>
